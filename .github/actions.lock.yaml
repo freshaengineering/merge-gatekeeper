@@ -1,13 +1,13 @@
 version: 1
-generated_at: 2026-05-25T15:54:04Z
+generated_at: 2026-06-11T15:39:18Z
 internal: []
 trusted:
   - action: actions/checkout
     refs:
+      - 34e114876b0b11c390a56381ad16ebd13914f8d5
       - v2
-      - v4
     occurrences:
-      v4:
+      34e114876b0b11c390a56381ad16ebd13914f8d5:
         .github/actions/github-actions/release-action/action.yml:
           - runs.steps.[0].uses
         .github/workflows/action-release copy.yaml:
@@ -21,9 +21,9 @@ trusted:
           - jobs.merge-gatekeeper.steps.[0].uses
   - action: actions/github-script
     refs:
-      - v7
+      - f28e40c7f34bde8b3046d885e986cb6290c5673b
     occurrences:
-      v7:
+      f28e40c7f34bde8b3046d885e986cb6290c5673b:
         .github/actions/github-actions/release-action/action.yml:
           - runs.steps.[5].uses
           - runs.steps.[6].uses
@@ -39,9 +39,9 @@ trusted:
           - jobs.build.steps.[1].uses
   - action: actions/setup-node
     refs:
-      - v4
+      - 49933ea5288caeca8642d1e84afbd3f7d6820020
     occurrences:
-      v4:
+      49933ea5288caeca8642d1e84afbd3f7d6820020:
         .github/actions/github-actions/release-action/action.yml:
           - runs.steps.[2].uses
         .github/actions/github-actions/validate-return-modified-action/action.yml:

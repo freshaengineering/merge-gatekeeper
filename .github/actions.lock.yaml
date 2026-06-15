@@ -1,5 +1,5 @@
 version: 1
-generated_at: 2026-06-15T13:15:43Z
+generated_at: 2026-06-15T17:50:28Z
 internal: []
 trusted:
   - action: actions/checkout
@@ -32,9 +32,9 @@ trusted:
           - runs.steps.[2].uses
   - action: actions/setup-go
     refs:
-      - v1
+      - 0caeaed6fd66a828038c2da3c0f662a42862658f
     occurrences:
-      v1:
+      0caeaed6fd66a828038c2da3c0f662a42862658f:
         .github/workflows/build-ci.yaml:
           - jobs.build.steps.[1].uses
   - action: actions/setup-node

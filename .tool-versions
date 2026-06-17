@@ -2,7 +2,7 @@
 golang 1.19
 
 # asdf plugin-add nodejs
-nodejs 20.18.1
+nodejs 24.0.0
 
 # asdf plugin-add yarn
 yarn 1.22.22

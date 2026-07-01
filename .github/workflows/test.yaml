@@ -1,0 +1,27 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - test-step
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  test-host-outbound:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Harden the runner
+        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2
+        with:
+          use-policy-store: true
+          api-key: ${{ secrets.WHATEVER }}
+      - name: hello world
+        run: |
+          sleep 4
+          echo "Hello, world!"
+      - name: Call Google
+        run: |
+          curl https://google.com

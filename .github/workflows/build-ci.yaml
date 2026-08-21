@@ -16,9 +16,6 @@ on:
       - go.mod
       - go.sum
 
-env:
-  GO_VERSION: 1.16.7
-
 permissions:
   contents: read
 
@@ -37,10 +34,9 @@ jobs:
         uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2
         with:
           fetch-depth: 0
-      - name: Set up Go
-        uses: actions/setup-go@0caeaed6fd66a828038c2da3c0f662a42862658f # v1
-        with:
-          go-version: ${{ env.GO_VERSION }}
+
+      - name: Setup mise
+        uses: step-security/mise-action@2796166110dee826668caddd4bffedae5116e7cd # v4.2.0
 
       - name: Run Go Build
         run: go build ./...

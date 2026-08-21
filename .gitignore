@@ -17,3 +17,5 @@
 # Built binary
 merge-gatekeeper
 node_modules
+
+.github/actions.lock.yaml

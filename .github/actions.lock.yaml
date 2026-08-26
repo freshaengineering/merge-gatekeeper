@@ -1,5 +1,5 @@
 version: 1
-generated_at: 2026-08-20T16:57:47Z
+generated_at: 2026-08-26T14:47:46Z
 internal: []
 trusted:
   - action: actions/checkout
@@ -30,13 +30,6 @@ trusted:
           - runs.steps.[7].uses
         .github/actions/github-actions/validate-return-modified-action/action.yml:
           - runs.steps.[2].uses
-  - action: actions/setup-go
-    refs:
-      - 0caeaed6fd66a828038c2da3c0f662a42862658f
-    occurrences:
-      0caeaed6fd66a828038c2da3c0f662a42862658f:
-        .github/workflows/build-ci.yaml:
-          - jobs.build.steps.[2].uses
   - action: actions/setup-node
     refs:
       - 49933ea5288caeca8642d1e84afbd3f7d6820020
@@ -67,6 +60,13 @@ external:
           - jobs.build.steps.[0].uses
         .github/workflows/merge-gatekeeper-latest.yaml:
           - jobs.merge-gatekeeper.steps.[0].uses
+  - action: step-security/mise-action
+    refs:
+      - 6e96d2ffbc65c037f23c78818f2a339d6cf830f7
+    occurrences:
+      6e96d2ffbc65c037f23c78818f2a339d6cf830f7:
+        .github/workflows/build-ci.yaml:
+          - jobs.build.steps.[2].uses
 local:
   - path: ./
     occurrences:

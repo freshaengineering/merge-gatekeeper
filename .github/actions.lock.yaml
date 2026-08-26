@@ -1,5 +1,5 @@
 version: 1
-generated_at: 2026-08-21T11:46:06Z
+generated_at: 2026-08-26T14:47:46Z
 internal: []
 trusted:
   - action: actions/checkout
@@ -62,9 +62,9 @@ external:
           - jobs.merge-gatekeeper.steps.[0].uses
   - action: step-security/mise-action
     refs:
-      - 2796166110dee826668caddd4bffedae5116e7cd
+      - 6e96d2ffbc65c037f23c78818f2a339d6cf830f7
     occurrences:
-      2796166110dee826668caddd4bffedae5116e7cd:
+      6e96d2ffbc65c037f23c78818f2a339d6cf830f7:
         .github/workflows/build-ci.yaml:
           - jobs.build.steps.[2].uses
 local:

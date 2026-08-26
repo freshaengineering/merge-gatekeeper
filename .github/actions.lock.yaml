@@ -1,5 +1,5 @@
 version: 1
-generated_at: 2026-06-15T17:50:28Z
+generated_at: 2026-08-20T16:57:47Z
 internal: []
 trusted:
   - action: actions/checkout
@@ -11,14 +11,14 @@ trusted:
         .github/actions/github-actions/release-action/action.yml:
           - runs.steps.[0].uses
         .github/workflows/action-release copy.yaml:
-          - jobs.check-changes.steps.[0].uses
+          - jobs.check-changes.steps.[1].uses
         .github/workflows/action-release.yaml:
-          - jobs.create-release.steps.[0].uses
+          - jobs.create-release.steps.[1].uses
       ee0669bd1cc54295c223e0bb666b733df41de1c5:
         .github/workflows/build-ci.yaml:
-          - jobs.build.steps.[0].uses
+          - jobs.build.steps.[1].uses
         .github/workflows/merge-gatekeeper-latest.yaml:
-          - jobs.merge-gatekeeper.steps.[0].uses
+          - jobs.merge-gatekeeper.steps.[1].uses
   - action: actions/github-script
     refs:
       - f28e40c7f34bde8b3046d885e986cb6290c5673b
@@ -36,7 +36,7 @@ trusted:
     occurrences:
       0caeaed6fd66a828038c2da3c0f662a42862658f:
         .github/workflows/build-ci.yaml:
-          - jobs.build.steps.[1].uses
+          - jobs.build.steps.[2].uses
   - action: actions/setup-node
     refs:
       - 49933ea5288caeca8642d1e84afbd3f7d6820020
@@ -47,27 +47,41 @@ trusted:
         .github/actions/github-actions/validate-return-modified-action/action.yml:
           - runs.steps.[0].uses
 external:
-  - action: tj-actions/changed-files
+  - action: step-security/changed-files
     refs:
-      - 48d8f15b2aaa3d255ca5af3eba4870f807ce6b3c
+      - 2e07db73e5ccdb319b9a6c7766bd46d39d304bad
     occurrences:
-      48d8f15b2aaa3d255ca5af3eba4870f807ce6b3c:
+      2e07db73e5ccdb319b9a6c7766bd46d39d304bad:
         .github/actions/github-actions/release-action/action.yml:
           - runs.steps.[1].uses
+  - action: step-security/harden-runner
+    refs:
+      - 9af89fc71515a100421586dfdb3dc9c984fbf411
+    occurrences:
+      9af89fc71515a100421586dfdb3dc9c984fbf411:
+        .github/workflows/action-release copy.yaml:
+          - jobs.check-changes.steps.[0].uses
+        .github/workflows/action-release.yaml:
+          - jobs.create-release.steps.[0].uses
+        .github/workflows/build-ci.yaml:
+          - jobs.build.steps.[0].uses
+        .github/workflows/merge-gatekeeper-latest.yaml:
+          - jobs.merge-gatekeeper.steps.[0].uses
 local:
   - path: ./
     occurrences:
       .github/workflows/merge-gatekeeper-latest.yaml:
-        - jobs.merge-gatekeeper.steps.[1].uses
+        - jobs.merge-gatekeeper.steps.[2].uses
   - path: ./.github/actions/github-actions/release-action
     occurrences:
       .github/workflows/action-release copy.yaml:
-        - jobs.check-changes.steps.[1].uses
+        - jobs.check-changes.steps.[2].uses
       .github/workflows/action-release.yaml:
-        - jobs.create-release.steps.[1].uses
+        - jobs.create-release.steps.[2].uses
   - path: ./.github/actions/github-actions/validate-return-modified-action
     occurrences:
       .github/actions/github-actions/release-action/action.yml:
         - runs.steps.[4].uses
 docker: []
 dynamic: []
+nested_floating_deps: []

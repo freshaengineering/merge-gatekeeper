@@ -8,8 +8,6 @@
 
 ## Useful but not required
 
-- [`docker`](https://docs.docker.com/engine/install/)
-  - required for building and running via docker
 
 ## Building Merge Gatekeeper
 
@@ -17,9 +15,6 @@ Using the [`Makefile`](./../Makefile) run the following to build:
 ```bash
 # build go binary
 make go-build
-
-# build docker container
-make docker-build
 ```
 
 ## Running Merge Gatekeeper
@@ -37,9 +32,6 @@ Using the [`Makefile`](./../Makefile) run the following to run:
 ```bash
 # build and run go binary
 make go-run
-
-# build and run docker container
-make docker-run
 ```
 
 ## Testing

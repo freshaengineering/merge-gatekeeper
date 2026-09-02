@@ -9,11 +9,5 @@ go-build:
 go-run: go-build
 	./merge-gatekeeper validate --token=$(TOKEN) --ref $(REF) --repo $(REPO) --ignored "$(IGNORED)"
 
-docker-build:
-	docker build -t merge-gatekeeper:latest .
-
-docker-run: docker-build
-	docker run --rm -it --name merge-gatekeeper merge-gatekeeper:latest validate --token=$(TOKEN) --ref $(REF) --repo $(REPO) --ignored "$(IGNORED)"
-
 test:
 	go test ./...
